@@ -22,7 +22,6 @@ const ProjectItem = (props) => {
     githubLink,
     demoLink,
     flipOrder,
-    noDemo,
   } = props;
   const fadeInVariants = {
     hidden: { opacity: 0, x: 0, y: 100 },
@@ -77,7 +76,7 @@ const ProjectItem = (props) => {
           >
             Repo
           </ButtonLink>
-          {!noDemo && (
+          {demoLink && (
             <ButtonLink
               href={demoLink}
               isExternal
